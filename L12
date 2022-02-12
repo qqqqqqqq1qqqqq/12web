@@ -1,0 +1,34 @@
+1)
+function sum() {
+  let nums = []
+  let num = 0
+  while(true) {
+    num = prompt('Number')
+    if(isNaN(num) || num === '') {
+      break
+    }
+    else{
+      nums.push(num)
+    }
+  }
+
+  return nums.reduce(function(a, b) { return Number(a) + Number(b); }, 0);
+}
+
+console.log(sum())
+
+2)
+let arr = [1, -2, 3, 4, -9, 6]
+
+function getMaxSubSum(arr) {
+  let sum = 0
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] >= 0){
+      sum += arr[i];
+    }
+  }
+  
+  return sum
+}
+
+console.log(getMaxSubSum(arr))
